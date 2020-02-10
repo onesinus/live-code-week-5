@@ -1,6 +1,7 @@
 // Setup awal
 if (localStorage.getItem("token")) {
     display('.comic-page');
+    loadDataComic();
     $("#btn-logout").show();
     loadDataComic();
 }else{
@@ -48,6 +49,7 @@ $(document).on('submit', ".login-page > form",  function(e) {
     })
     .then(res => {
         localStorage.setItem("token", res.access_token);
+        $("#btn-logout").show();
         display('.comic-page');
         loadDataComic()
     })
@@ -74,6 +76,7 @@ $(document).on('submit', ".register-page > form",  function(e) {
     .then(res => {
         console.log(res);
         localStorage.setItem("token", res.access_token);
+        $("#btn-logout").show();
         display('.comic-page');
         loadDataComic();
     })
@@ -140,6 +143,7 @@ $(document).on('submit', ".update-comic-page > form", function(e) {
 // logout
 $("#btn-logout").on('click', function() {
     localStorage.removeItem("token");
+    $("#btn-logout").hide();
     display(".login-page");
 });
 
