@@ -20,12 +20,12 @@
         <button id="btn-logout" class="btn btn-primary ml-auto">Logout</button>
       </div>
 
-      <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none">
         Your notification goes here
       </div>
 
       <!-- This is Login Form  -->
-      <div>
+      <div class="login-page">
         <h1>Login</h1>
         <form class="my-4">
           <div class="form-group">
@@ -51,13 +51,13 @@
           <button type="submit" class="btn btn-primary">
             Submit
           </button>
-          <button type="submit" class="btn btn-info">
+          <button type="button" class="btn btn-info btnRegister">
             Register
           </button>
         </form>
       </div>
 
-      <div>
+      <div class="register-page">
         <h1>Register</h1>
         <form class="my-4">
           <div class="form-group">
@@ -93,47 +93,36 @@
           <button type="submit" class="btn btn-primary">
             Submit
           </button>
-          <button type="submit" class="btn btn-warning">
+          <button type="button" class="btn btn-warning btnRandomUser">
             Random User
           </button>
-          <button type="submit" class="btn btn-info">
+          <button type="button" class="btn btn-info btnToLogin">
             Login
           </button>
         </form>
-      <ist -->
-      <div>
+      </div>
+      <div class="comic-page">
         <h1>Comic Collection</h1>
         <div class="row my-4">
           <!-- Each of comic will have one of this card -->
-          <div class="col-4 mb-4">
-            <div class="card text-center">
-              <img
-                src="https://www.idwpublishing.com/wp-content/uploads/2018/10/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yNDAvNzQ0L29yaWdpbmFsL1NwaWRlcm1hbjAxX2N2ckEuanBn.jpeg"
-                class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">The Amazing Spiderman - new Avengers</h5>
-                <p class="card-text">Author: J Michael S</p>
-                <button class="btn btn-primary">Edit</button>
-              </div>
-            </div>
-          </div>
         </div>
-
+      </div>
       <!-- This is form page to update a comic -->
-      <div>
+      <div class="update-comic-page">
         <h1>Update Comic</h1>
         <form class="my-4">
+          <input type="hidden" id="id">
           <div class="form-group">
             <label for="title">Title</label>
             <input id="title" type="text" class="form-control" name="title" />
           </div>
           <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" />
+            <input type="text" class="form-control" name="author" id="author" />
           </div>
           <div class="form-group">
             <label for="imageUrl">Comic Image URL</label>
-            <input type="text" class="form-control" name="imageUrl" />
+            <input type="text" class="form-control" name="imageUrl" id="imgUrl" />
           </div>
           <button id="btn-update" type="submit" class="btn btn-primary">
             Submit
@@ -141,5 +130,14 @@
         </form>
       </di>
     </div>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+
+    <script src="js/app.js"></script>
   </body>
 </html>
